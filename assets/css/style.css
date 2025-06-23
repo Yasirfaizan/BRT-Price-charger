@@ -1,0 +1,101 @@
+body {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    position: relative;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: url('https://transpeshawar.pk/wp-content/uploads/2021/04/154770121_2974893449419993_1853290103432291505_n.jpg') center center/cover no-repeat;
+    opacity: 0.48;
+    filter: blur(0.7px) brightness(1.03) contrast(1.12);
+    pointer-events: none;
+}
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: linear-gradient(135deg, rgba(168,237,234,0.18) 0%, rgba(254,214,227,0.18) 100%);
+    pointer-events: none;
+}
+.container {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(60,60,120,0.15);
+    max-width: 370px;
+    width: 100%;
+    text-align: center;
+    animation: popIn 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+    position: relative;
+    z-index: 1;
+}
+@keyframes popIn {
+    0% { transform: scale(0.8) translateY(40px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+h2 {
+    margin-bottom: 1.5rem;
+    color: #7b1fa2;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+input[type="number"] {
+    width: 85%;
+    padding: 0.8rem;
+    border: 1.5px solid #e1bee7;
+    border-radius: 0.7rem;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    background: #fafafa;
+    box-shadow: 0 2px 8px rgba(123,31,162,0.04);
+}
+input[type="number"]:focus {
+    border: 2px solid #7b1fa2;
+    box-shadow: 0 0 0 2px #e1bee7;
+}
+input[type="number"]::placeholder {
+    color: #b39ddb;
+    opacity: 1;
+    font-style: italic;
+}
+button {
+    padding: 0.8rem 2.2rem;
+    background: linear-gradient(90deg, #7b1fa2 0%, #3949ab 100%);
+    color: #fff;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(123,31,162,0.10);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    margin-top: 0.2rem;
+}
+button:hover {
+    background: linear-gradient(90deg, #3949ab 0%, #7b1fa2 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(123,31,162,0.18);
+}
+.result {
+    margin-top: 1.7rem;
+    font-size: 1.25rem;
+    color: #fff;
+    background: linear-gradient(90deg, #7b1fa2 0%, #3949ab 100%);
+    border-radius: 0.7rem;
+    padding: 1rem 0.5rem;
+    min-height: 2.2em;
+    box-shadow: 0 2px 12px rgba(123,31,162,0.08);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
